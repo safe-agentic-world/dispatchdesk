@@ -1,5 +1,7 @@
 # DispatchDesk
 
+[![Customer compatibility](https://github.com/safe-agentic-world/nomos-customer-support-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/safe-agentic-world/nomos-customer-support-agent/actions/workflows/ci.yml)
+
 A local AI support agent that reads tickets, drafts replies, and pauses risky
 operations for review. Its tools own real SQLite state: drafts, an outbox, and
 a refund ledger. **No email is delivered and no money moves.**

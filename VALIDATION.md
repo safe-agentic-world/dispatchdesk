@@ -19,6 +19,14 @@ reviewer identity separation, expiry, payload and recipient drift, restart/resum
 gateway unavailability, audit outcome existence, persistent idempotency, bounded
 agent execution, argument validation, and refund budget limits.
 
+A fresh clone from GitHub was installed non-editably into a new virtual
+environment. All 19 tests passed there; wheel/sdist builds and `pip check`
+passed, and the installed CLI initialized and inspected a new database.
+
+[Hosted CI for the initial implementation](https://github.com/safe-agentic-world/nomos-customer-support-agent/actions/runs/34437644609)
+passed all five jobs: a standalone/no-Nomos build and tests, plus Nomos integration
+on Ubuntu 24.04 and Windows with Python 3.10 and 3.12.
+
 ## Live Model Checks
 
 The local model read T100, consumed the tool result, created a draft, and finished.
@@ -53,7 +61,6 @@ No Nomos source changes were made while building this customer application.
 
 ## Limits
 
-- Hosted CI must independently verify the Linux/Windows and Python 3.10/3.12 matrix.
 - No external email, payment provider, production account, or real customer data was used.
 - Live-model output is nondeterministic; CI deliberately uses explicit planner doubles.
 - Multiple concurrent writers to one session file are unsupported.
