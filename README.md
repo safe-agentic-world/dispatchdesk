@@ -128,8 +128,8 @@ security review. Only one process should write a session at a time. Use a new
 
 ## Contribute
 
-Run the tests above, add a regression for any behavior change, and describe which
-model/gateway versions you tested. Sanitized failing cases are welcome. Do not
-commit databases, credentials, virtual environments, or private session files.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for environment setup, validation commands,
+and pull request expectations. Sanitized failing cases are welcome. Do not commit
+databases, credentials, virtual environments, or private session files.
 
 MIT licensed. See [LICENSE](LICENSE) and [VALIDATION.md](VALIDATION.md).

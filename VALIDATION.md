@@ -9,8 +9,9 @@
 
 ## Deterministic Checks
 
-`NOMOS_BINARY` enabled: **19 tests passed**, including ten real-gateway tests
-and nine standalone tests. The integration suite also runs all eight policy
+`NOMOS_BINARY` enabled: **21 tests passed**, including ten real-gateway tests,
+nine standalone tests, and two repository documentation/identity checks.
+The integration suite also runs all eight policy
 expectations using the released `nomos test` command. Workflow syntax passes
 `actionlint`. Wheel and source distribution build successfully.
 
@@ -19,18 +20,16 @@ reviewer identity separation, expiry, payload and recipient drift, restart/resum
 gateway unavailability, audit outcome existence, persistent idempotency, bounded
 agent execution, argument validation, and refund budget limits.
 
-A fresh clone from GitHub was installed non-editably into a new virtual
-environment. All 19 tests passed there; wheel/sdist builds and `pip check`
+A fresh clone of the initial implementation was installed non-editably into a new
+virtual environment. Its 19 tests passed; wheel/sdist builds and `pip check`
 passed, and the installed CLI initialized and inspected a new database.
 
-[Hosted CI for the initial implementation, in the original repository](https://github.com/safe-agentic-world/nomos-customer-support-agent/actions/runs/34437644609)
+[Hosted CI for the pre-housekeeping DispatchDesk baseline](https://github.com/safe-agentic-world/dispatchdesk/actions/runs/34490536896)
 passed all five jobs: a standalone/no-Nomos build and tests, plus Nomos integration
 on Ubuntu 24.04 and Windows with Python 3.10 and 3.12.
 
-The project now lives at [safe-agentic-world/dispatchdesk](https://github.com/safe-agentic-world/dispatchdesk).
 See its [current CI runs](https://github.com/safe-agentic-world/dispatchdesk/actions/workflows/ci.yml)
-for validation after the repository move. The historical run above is retained
-as evidence rather than relinked to a run that does not exist in the new repository.
+for subsequent changes. The linked run verifies the renamed repository.
 
 ## Live Model Checks
 
