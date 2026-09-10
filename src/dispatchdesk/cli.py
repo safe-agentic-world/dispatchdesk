@@ -1,6 +1,5 @@
 import argparse
 import json
-from pathlib import Path
 import sys
 
 from .agent import OllamaPlanner, run_agent

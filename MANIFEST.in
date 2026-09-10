@@ -1,4 +1,4 @@
-include LICENSE README.md VALIDATION.md
+include LICENSE README.md VALIDATION.md CONTRIBUTING.md
 recursive-include policies *.yaml *.json
 recursive-include scripts *.py
 recursive-include tests *.py

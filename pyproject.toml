@@ -16,6 +16,7 @@ Repository = "https://github.com/safe-agentic-world/dispatchdesk"
 Issues = "https://github.com/safe-agentic-world/dispatchdesk/issues"
 
 [project.optional-dependencies]
+dev = ["build==1.6.0"]
 nomos = ["nomos-agent-sdk @ git+https://github.com/safe-agentic-world/nomos.git@f5b35a69ab4364f5035de3dc7fe1a4db49555f1b#subdirectory=sdk/python"]
 
 [project.scripts]
