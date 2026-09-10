@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dispatchdesk"
+version = "0.1.0"
+description = "A local support agent with persistent tools and pluggable authorization"
+requires-python = ">=3.10"
+readme = "README.md"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+nomos = ["nomos-agent-sdk @ git+https://github.com/safe-agentic-world/nomos.git@f5b35a69ab4364f5035de3dc7fe1a4db49555f1b#subdirectory=sdk/python"]
+
+[project.scripts]
+dispatchdesk = "dispatchdesk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

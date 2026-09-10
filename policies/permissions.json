@@ -1,0 +1,14 @@
+{
+  "schema_version": "v1",
+  "identity": {"principal": "support-worker", "agent": "dispatchdesk", "environment": "dev"},
+  "cases": [
+    {"name": "read own ticket", "action": {"action_type": "support.read_ticket", "resource": "support://acme/tickets/T100", "params": {}}, "expect": "ALLOW"},
+    {"name": "draft reply", "action": {"action_type": "support.draft_reply", "resource": "support://acme/tickets/T100", "params": {}}, "expect": "ALLOW"},
+    {"name": "send needs approval", "action": {"action_type": "support.send_reply", "resource": "support://acme/tickets/T100", "params": {}}, "expect": "REQUIRE_APPROVAL"},
+    {"name": "refund needs approval", "action": {"action_type": "support.refund_order", "resource": "support://acme/tickets/T100", "params": {"amount_cents": 2500}}, "expect": "REQUIRE_APPROVAL"},
+    {"name": "cross tenant read denied", "action": {"action_type": "support.read_ticket", "resource": "support://other/tickets/T200", "params": {}}, "expect": "DENY"},
+    {"name": "cross tenant send denied", "action": {"action_type": "support.send_reply", "resource": "support://other/tickets/T200", "params": {}}, "expect": "DENY"},
+    {"name": "export denied", "action": {"action_type": "support.export", "resource": "support://acme/tickets/all", "params": {}}, "expect": "DENY"},
+    {"name": "unknown action denied", "action": {"action_type": "support.delete_ticket", "resource": "support://acme/tickets/T100", "params": {}}, "expect": "DENY"}
+  ]
+}

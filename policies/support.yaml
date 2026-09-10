@@ -1,0 +1,34 @@
+version: v1
+rules:
+  - id: support-read-own-tenant
+    action_type: support.read_ticket
+    resource: support://acme/tickets/*
+    decision: ALLOW
+    principals: [support-worker]
+    agents: [dispatchdesk]
+    environments: [dev]
+  - id: support-draft-own-tenant
+    action_type: support.draft_reply
+    resource: support://acme/tickets/*
+    decision: ALLOW
+    principals: [support-worker]
+    agents: [dispatchdesk]
+    environments: [dev]
+  - id: support-review-send
+    action_type: support.send_reply
+    resource: support://acme/tickets/*
+    decision: REQUIRE_APPROVAL
+    principals: [support-worker]
+    agents: [dispatchdesk]
+    environments: [dev]
+  - id: support-review-refund
+    action_type: support.refund_order
+    resource: support://acme/tickets/*
+    decision: REQUIRE_APPROVAL
+    principals: [support-worker]
+    agents: [dispatchdesk]
+    environments: [dev]
+  - id: support-no-export
+    action_type: support.export
+    resource: support://**
+    decision: DENY
