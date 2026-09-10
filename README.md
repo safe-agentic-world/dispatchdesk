@@ -1,6 +1,6 @@
 # DispatchDesk
 
-[![Customer compatibility](https://github.com/safe-agentic-world/nomos-customer-support-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/safe-agentic-world/nomos-customer-support-agent/actions/workflows/ci.yml)
+[![Customer compatibility](https://github.com/safe-agentic-world/dispatchdesk/actions/workflows/ci.yml/badge.svg)](https://github.com/safe-agentic-world/dispatchdesk/actions/workflows/ci.yml)
 
 A local AI support agent that reads tickets, drafts replies, and pauses risky
 operations for review. Its tools own real SQLite state: drafts, an outbox, and
@@ -20,8 +20,8 @@ result, and decides what to do next. No paid APIs, cloud telemetry, or model
 downloads are triggered by the application.
 
 ```bash
-git clone https://github.com/safe-agentic-world/nomos-customer-support-agent.git
-cd nomos-customer-support-agent
+git clone https://github.com/safe-agentic-world/dispatchdesk.git
+cd dispatchdesk
 python -m venv .venv
 # macOS/Linux:
 .venv/bin/python -m pip install -e .

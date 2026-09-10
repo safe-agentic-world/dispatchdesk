@@ -23,9 +23,14 @@ A fresh clone from GitHub was installed non-editably into a new virtual
 environment. All 19 tests passed there; wheel/sdist builds and `pip check`
 passed, and the installed CLI initialized and inspected a new database.
 
-[Hosted CI for the initial implementation](https://github.com/safe-agentic-world/nomos-customer-support-agent/actions/runs/34437644609)
+[Hosted CI for the initial implementation, in the original repository](https://github.com/safe-agentic-world/nomos-customer-support-agent/actions/runs/34437644609)
 passed all five jobs: a standalone/no-Nomos build and tests, plus Nomos integration
 on Ubuntu 24.04 and Windows with Python 3.10 and 3.12.
+
+The project now lives at [safe-agentic-world/dispatchdesk](https://github.com/safe-agentic-world/dispatchdesk).
+See its [current CI runs](https://github.com/safe-agentic-world/dispatchdesk/actions/workflows/ci.yml)
+for validation after the repository move. The historical run above is retained
+as evidence rather than relinked to a run that does not exist in the new repository.
 
 ## Live Model Checks
 
